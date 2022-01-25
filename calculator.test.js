@@ -45,10 +45,3 @@ test('Testing negative and positive numbers', () => {
     expect(calculator.modulo(x3, y3)).toBe(3)
 });
 
-test('Testing negative and positive numbers', () => {
-    expect(calculator.add(x3, y3)).toNotBe(3),
-    expect(calculator.subtract(x3, y3)).toBe(13),
-    expect(calculator.multiply(x3, y3)).toBe(-40),
-    expect(calculator.divide(x3, y3)).toBe(-1.6),
-    expect(calculator.modulo(x3, y3)).toBe(3)
-});
