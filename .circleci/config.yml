@@ -1,16 +1,15 @@
 version: 2.1
 
-
 jobs:
-  build: 
+  build:
   docker:
-  - image: cimg/node:16.10
+    - image: cimg/node:16.10
 steps:
-- checkout
-- run :  npm install  
-- run : npm run coverage
+  - checkout
+  - run: npm install
+  - run: npm run coverage
 
 workflows:
-   build-workflow:
-      jobs:
-         -build:
+build-workflow:
+  jobs:
+    -build:
