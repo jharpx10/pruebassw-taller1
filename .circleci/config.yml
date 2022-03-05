@@ -12,4 +12,4 @@ steps:
 workflows:
 build-workflow:
   jobs:
-    -build:
+    - build:
