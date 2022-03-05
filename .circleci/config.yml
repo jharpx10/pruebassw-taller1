@@ -1,14 +1,16 @@
 
 version: 2.1
 
-
+orbs: 
+  sonarcloud: sonarsource/sonarcloud@1.0.3
 
 jobs:
   build:
     docker:
-      - image: cimg/node:12.22.9
+      - image: 'node:latest'
     steps:
       - checkout
+      - sonarcloud/scan
       - run: npm install
       - run: npm test
 
@@ -17,3 +19,4 @@ workflows:
   build-workflow:
       jobs:
         - build
+        context: sonarcloud
