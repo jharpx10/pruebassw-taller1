@@ -1,5 +1,5 @@
 
-const calculator = require('../calculator');
+const calculator = require('../src/calculator');
 
 const x = 13;
 const y = 5;
